@@ -1,6 +1,6 @@
 # Modem-LoRa
 
-The role of the card is to provide a very simple and versatile platform for developing experiments around Lora transmission.
+The role of the card is to provide a very simple and versatile platform for developing experiments around [LoRa](https://en.wikipedia.org/wiki/LoRa) transmission.
 
 ## features
 
