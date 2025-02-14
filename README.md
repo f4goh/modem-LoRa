@@ -23,8 +23,8 @@ Numerous software examples are provided, such as :
 	- Weather
 - KISS LoRa serial interface with pinAPRS or YAAC software - Yet Another APRS Client
 
-- Analysis of the protocol used by the meshtastic open source project
+- Analysis of the protocol used by the meshtastic](https://meshtastic.org/) open source project
 	- AES128 decryption
 	- Discover [protobuf](https://en.wikipedia.org/wiki/Protocol_Buffers) (free and open-source cross-platform data format used to serialize structured data)
-	- Understand the transmission of packets around meshtastic
+	- Understand the transmission of packets around [meshtastic](https://meshtastic.org/docs/overview/mesh-algo/)
 
