@@ -1,4 +1,4 @@
-# modem-LoRa
+# Modem-LoRa
 
 The role of the card is to provide a very simple and versatile platform for developing experiments around Lora transmission.
 
@@ -17,7 +17,7 @@ The role of the card is to provide a very simple and versatile platform for deve
 
 Numerous software examples are provided, such as :
 
-- Simple lora point-to-point transmission
+- Simple LoRa point-to-point transmission
 - Transmission of APRS frames 
 - KISS LoRa serial interface with pinAPRS or YAAC software - Yet Another APRS Client
 
