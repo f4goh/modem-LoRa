@@ -155,20 +155,6 @@ void results(frameStr frame, aesVector* decodeAES128CTR) {
   }
 
   free(buf);
-
-
-  /*
-  if (decodeAES128CTR->plaintext[1] == 0x01) {  //a revoir dans une structure message
-    Serial.print(F("Message received: "));
-    for (int n = 4; n < 4 + decodeAES128CTR->plaintext[3]; n++) {
-      Serial.print((char)decodeAES128CTR->plaintext[n]);
-      Serial1.print((char)decodeAES128CTR->plaintext[n]);
-     
-    }
-  } else {
-    Serial.print(F("Frame unknown"));
-  }
-*/
   Serial.println();
 }
 

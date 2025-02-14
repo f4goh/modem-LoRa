@@ -13,9 +13,3 @@
 	- Send LoRa APRS Position, message and Weather
 
 
-# Schematics
-![Scart to hdmi](upscaler.png "upscaler")
-
-[Upscaler](https://fr.aliexpress.com/w/wholesale-upscaler.html)
-
-
