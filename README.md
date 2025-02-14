@@ -6,9 +6,8 @@ The role of the card is to provide a very simple and versatile platform for deve
 
 - Arduino micro based on the ATmega32U4
 - virtual (CDC) serial / COM port. (Serial)
-- hardware sérial (Serial1)
+- hardware External sérial (Serial1) RS232 with max3232
 - RA-02  sx1278 Module
-- External RS232 with max3232
 - Power supply 5V but GPIO 3.3V only
 - I2C Interface
 - Potentiometer
@@ -19,6 +18,9 @@ Numerous software examples are provided, such as :
 
 - Simple LoRa point-to-point transmission
 - Transmission of APRS frames 
+	- Message
+	- Position
+	- Weather
 - KISS LoRa serial interface with pinAPRS or YAAC software - Yet Another APRS Client
 
 - Analysis of the protocol used by the meshtastic open source project
