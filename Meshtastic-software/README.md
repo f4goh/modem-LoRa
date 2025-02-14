@@ -32,7 +32,7 @@
 
 - [radio-settings](https://meshtastic.org/docs/overview/radio-settings/)
 
-- [Header] (https://meshtastic.org/docs/overview/mesh-algo/)
+- [Mestastic algorithm](https://meshtastic.org/docs/overview/mesh-algo/)
 
 ```
 Meshtastic AES-128 decrypt in CTR mode
@@ -52,7 +52,7 @@ Message received : Test
 	
 [protobuf decoder](https://protogen.marcgravell.com/decode)
 
-[Mestastic protobuf] https://github.com/meshtastic/firmware/tree/master/src/mesh/generated/meshtastic
+[Mestastic protobuf](https://github.com/meshtastic/firmware/tree/master/src/mesh/generated/meshtastic)
 
 
 ```
@@ -78,24 +78,24 @@ TEXT_MESSAGE_APP b'\x88\x1b\xc2%' -> b'\xff\xff\xff\xff' Test
 
 # Install Mestastic libraries for [thonny](https://thonny.org/)
 
-![Mestastic-inst](mesh_install_thonny01.png "th01")
+![Mestastic-inst](images/mesh_install_thonny01.png "th01")
 
-![Mestastic-inst](mesh_install_thonny02.png "th02")
+![Mestastic-inst](images/mesh_install_thonny02.png "th02")
 
-![Mestastic-inst](mesh_install_thonny03.png "th03")
+![Mestastic-inst](images/mesh_install_thonny03.png "th03")
 
 # Base 64 decoder
 
 [base64 decoder](https://base64.guru/converter/decode/hex)
 
-![base64](base64.png "base64")
+![base64](images/base64.png "base64")
 
 
 # AES decryption
 
 [AES decryption](https://cryptii.com/pipes/aes-encryption)
 
-![AES](AES128.png "aes")
+![AES](images/AES128.png "aes")
 
 
 
