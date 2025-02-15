@@ -28,7 +28,7 @@ https://protobuf.dev/programming-guides/proto3/
 
   
 |Proto Type	|Notes|
-|---    |:-:    |
+|---    |:--    |
 |double	|	|
 |float	|	|
 |int32	|Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint32 instead.|
