@@ -35,6 +35,11 @@
 
 - [radio-settings](https://meshtastic.org/docs/overview/radio-settings/)
 
+```cpp
+  LoRa.setPreambleLength(16);  //mesh
+  LoRa.setSyncWord(0x2b);      //mesh
+ ``` 
+
 - [Mestastic algorithm](https://meshtastic.org/docs/overview/mesh-algo/)
 
 ```
