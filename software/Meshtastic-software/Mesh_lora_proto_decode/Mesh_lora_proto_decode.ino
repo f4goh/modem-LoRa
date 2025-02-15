@@ -47,7 +47,7 @@ Message received : Test
 #define FREQUENCY 433875000
 #define SPREADING_FACTOR 11
 #define SIGNAL_BANDWIDTH 250000
-#define CODING_RATE_5 5
+#define CODING_RATE_4 5
 #define TX_POWER 20
 
 typedef struct {
@@ -137,24 +137,29 @@ void results(frameStr frame, aesVector* decodeAES128CTR) {
 
   Serial.print("Decoded test_number: ");
   Serial.println(decoded_message.portnum);
-
-  meshtastic_Data_payload_t payload = decoded_message.payload;
-  char* buf = malloc(payload.size + 1);      // because of terminating `\0`
-  memcpy(buf, payload.bytes, payload.size);  // copy the message
-  buf[payload.size] = '\0';                  // force '\0' termination
-  Serial.println(buf);
-  if (strncmp("Led", buf, 3) == 0) {
-    switch ((char)buf[3]) {
-      case '0':
-        digitalWrite(LED1, LOW);
-        break;
-      case '1':
-        digitalWrite(LED1, HIGH);
-        break;
+  if (decoded_message.portnum == 1) {
+    meshtastic_Data_payload_t payload = decoded_message.payload;
+    char* buf = malloc(payload.size + 1);      // because of terminating `\0`
+    memcpy(buf, payload.bytes, payload.size);  // copy the message
+    buf[payload.size] = '\0';                  // force '\0' termination
+    Serial.println(buf);
+    if (strncmp("Led", buf, 3) == 0) {
+      switch ((char)buf[3]) {
+        case '0':
+          digitalWrite(LED1, LOW);
+          break;
+        case '1':
+          digitalWrite(LED1, HIGH);
+          break;
+      }
     }
+    free(buf);
+  } else {
+    Serial.println(F("Not a text smg"));
   }
 
-  free(buf);
+
+
   Serial.println();
 }
 
@@ -186,7 +191,7 @@ void setup() {
 
   LoRa.setSpreadingFactor(SPREADING_FACTOR);
   LoRa.setSignalBandwidth(SIGNAL_BANDWIDTH);
-  LoRa.setCodingRate4(CODING_RATE_5);
+  LoRa.setCodingRate4(CODING_RATE_4);
   LoRa.enableCrc();
   LoRa.setPreambleLength(16);  //mesh
   LoRa.setSyncWord(0x2b);      //mesh
