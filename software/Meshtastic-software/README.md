@@ -101,12 +101,19 @@ TEXT_MESSAGE_APP b'\x88\x1b\xc2%' -> b'\xff\xff\xff\xff' Test
 
 ![AES](images/AES128.png "aes")
 
+# Glossary
 
-
-
-
-
-
-
-
+- Audio : Enable Support for Codec2 Voice Comms on certain devices.
+- Canned Message : Set a number of predefined messages to send out
+- Detection Sensor : Monitored a pin for high/low status and send text alerts.
+- External Notification : Incoming messages are able to alert you using LEDs, Buzzers, etc.
+- MQTT : Forward to an MQTT server, possibly to join meshes via the Internet.
+- Neighbor Info : Send info on 0-hop neighbors to the mesh.
+- Paxcounter : Count the number of BLE and Wifi devices passing by a node.
+- Range Test : Send messages at an interval to test the max distance
+- Remote Hardware : Set and read a GPIO status remotely over the mesh.
+- Serial Module : Send messages across the mesh by sending strings over a serial port.
+- Store & Forward : Store messages on a device for delivery after clients rejoin the mesh.
+- Telemetry Transmit : sensor readings on a regular interval to the mesh.
+- Traceroute : Track which nodes are used to hop a message to a certain destination
 
