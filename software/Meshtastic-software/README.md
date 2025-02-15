@@ -30,6 +30,9 @@
 
 # Meshtastic-technical links	
 
+![protocol](images/protocol.png "protocol")
+
+
 - [radio-settings](https://meshtastic.org/docs/overview/radio-settings/)
 
 - [Mestastic algorithm](https://meshtastic.org/docs/overview/mesh-algo/)

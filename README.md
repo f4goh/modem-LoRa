@@ -1,7 +1,9 @@
 # Modem-LoRa
 
-The role of the card is to provide a very simple and versatile platform for developing experiments around [LoRa](https://en.wikipedia.org/wiki/LoRa) transmission.
+This card provide a very simple and versatile platform for developing experiments around [LoRa](https://en.wikipedia.org/wiki/LoRa) transmission.
 
+![modem](images/modem.jpg "modem")
+---
 ## features
 
 - Arduino micro based on the ATmega32U4
@@ -27,4 +29,14 @@ Numerous software examples are provided, such as :
 	- AES128 decryption
 	- Discover [protobuf](https://en.wikipedia.org/wiki/Protocol_Buffers) (free and open-source cross-platform data format used to serialize structured data)
 	- Understand the transmission of packets around [meshtastic](https://meshtastic.org/docs/overview/mesh-algo/)
+---
+# Schematics
+![sch](images/modemLora.png "sch")
 
+# PCB
+![pcb](images/pcb.png "pcb")
+
+# Arduino Micro ATmega32U4 pinout
+![pinout](images/micro-pinout.png "pinout")
+---
+![license](images/ccbyncsa.png "license")
