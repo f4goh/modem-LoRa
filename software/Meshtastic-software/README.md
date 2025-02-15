@@ -80,7 +80,7 @@ TEXT_MESSAGE_APP b'\x88\x1b\xc2%' -> b'\xff\xff\xff\xff' Test
 ```
 
 
-# Install Mestastic libraries for [thonny](https://thonny.org/)
+# Install Mestastic libraries for [thonny](https://thonny.org/) (for python-decode.py)
 
 ![Mestastic-inst](images/mesh_install_thonny01.png "th01")
 

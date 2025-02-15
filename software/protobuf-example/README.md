@@ -1,5 +1,14 @@
-# protobuf exemple
+# LoRa simple text modem (no protobuf)
 
+- LoRa_modem_noproto.ino
+
+```
+LoRa simple text modem
+message send : Hello
+Received packet 'good morning' with RSSI -58
+```
+
+# protobuf exemples
 
 - quick_protobuf_tuto
 
