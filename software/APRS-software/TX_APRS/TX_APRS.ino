@@ -47,12 +47,17 @@ void loop() {
     switch (c) {
       case 'm':
         Serial.println(F("Send a message"));
+        mes.setRecipient("F4KMN    ");
+        mes.setComment("i like LoRa");
         pdu = mes.getPduMes(false);
         Serial.println(pdu);
         lora.send(pdu, mes.getPduLength());
         break;
       case 'p':
         Serial.println(F("Send a position"));
+        pos.setLatitude(48.010237); 
+        pos.setLongitude(0.206267);
+        pos.setSymbol('O');
         pos.setAltitude(80);
         pdu = pos.getPduAprs(false);
         Serial.println(pdu);

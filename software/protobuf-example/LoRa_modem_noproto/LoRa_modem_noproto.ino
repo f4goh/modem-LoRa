@@ -15,7 +15,7 @@
 #define FREQUENCY 433675000  //QSY no APRS and no Mesh frequency
 #define SPREADING_FACTOR 12
 #define SIGNAL_BANDWIDTH 125000
-#define CODING_RATE_5 5
+#define CODING_RATE_4 5
 #define TX_POWER 20
 
 #include <SPI.h>
@@ -39,7 +39,7 @@ void setup() {
 
   LoRa.setSpreadingFactor(SPREADING_FACTOR);
   LoRa.setSignalBandwidth(SIGNAL_BANDWIDTH);
-  LoRa.setCodingRate4(CODING_RATE_5);
+  LoRa.setCodingRate4(CODING_RATE_4);
   LoRa.enableCrc();
   LoRa.setTxPower(TX_POWER);  //Config.lora.power);
   Serial.println("LoRa init done!");
