@@ -31,7 +31,7 @@ Numerous software examples are provided, such as :
 	- Understand the transmission of packets around [meshtastic](https://meshtastic.org/docs/overview/mesh-algo/)
 ---
 # Schematics
-![sch](images/modemLora.png "sch")
+![sch](schematics/modemLora.png "sch")
 
 # PCB
 ![pcb](images/pcb.png "pcb")
@@ -40,3 +40,18 @@ Numerous software examples are provided, such as :
 ![pinout](images/micro-pinout.png "pinout")
 ---
 ![license](images/ccbyncsa.png "license")
+
+#APRS KISS
+
+![kiss](images/pinPointAPRS_KISS.png "kiss")
+
+#APRS 3 messages sent
+
+![aprs](images/pinPointAPRS_3Keys.png "aprs")
+
+
+
+
+
+
+
