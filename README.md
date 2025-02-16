@@ -41,11 +41,11 @@ Numerous software examples are provided, such as :
 ---
 ![license](images/ccbyncsa.png "license")
 
-#APRS KISS
+# APRS KISS
 
 ![kiss](images/pinPointAPRS_KISS.png "kiss")
 
-#APRS 3 messages sent
+# APRS 3 messages sent
 
 ![aprs](images/pinPointAPRS_3Keys.png "aprs")
 
