@@ -74,6 +74,6 @@ protoc --nanopb_out=. weather.proto
 
 ![protoc](protocWin.png "protoc")
 
-# [decode messages on line](https://protobuf-decoder.netlify.app/)
+# [decode messages on line](https://protobuf-decoder.netlify.app/) or [protogen decoder](https://protogen.marcgravell.com/decode)
 
 ![decode](decodeWeather.png "decode")
