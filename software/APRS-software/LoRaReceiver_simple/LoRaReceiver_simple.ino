@@ -27,7 +27,7 @@ A5,72,A4,AB, Packet Header: The sending node's unique packet ID for this packet.
 #define FREQUENCY 433775000
 #define SPREADING_FACTOR 12
 #define SIGNAL_BANDWIDTH 125000
-#define CODING_RATE_5 5
+#define CODING_RATE_4 5
 #define TX_POWER 20
 /*
 //meshtastic
@@ -70,7 +70,7 @@ void setup() {
 
   LoRa.setSpreadingFactor(SPREADING_FACTOR);
   LoRa.setSignalBandwidth(SIGNAL_BANDWIDTH);
-  LoRa.setCodingRate4(CODING_RATE_5);
+  LoRa.setCodingRate4(CODING_RATE_4);
   LoRa.enableCrc();
  // LoRa.setPreambleLength(16);  //mesh
  // LoRa.setSyncWord(0x2b);      //mesh

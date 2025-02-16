@@ -10,6 +10,18 @@ message Data {
   required int32 wind_speed      = 4;
   required int32 wind_direction  = 5;
 }
+result in the serial console
+Message Length: 15
+Message: 
+0d00009441103c18f707200f288402
+Decoded message: 
+18.50
+60
+1015
+15
+260
+https://protogen.marcgravell.com/decode
+https://protobuf-decoder.netlify.app/
 
 */
 
@@ -49,10 +61,13 @@ void setup() {
  
   Serial.println("Message: ");
  
-  for(int i = 0; i<stream.bytes_written; i++){
-    Serial.print(buffer[i],HEX);
-    Serial.print(',');
+ char hexBuf[3];
+
+  for (int i = 0; i < stream.bytes_written; i++) {
+    sprintf (hexBuf, "%02x", buffer[i]);
+    Serial.print(hexBuf);
   }
+  Serial.println();
  
   // Décodage
   Data decoded_message = Data_init_zero;

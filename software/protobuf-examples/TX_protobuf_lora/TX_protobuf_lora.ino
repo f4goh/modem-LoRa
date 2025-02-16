@@ -1,5 +1,7 @@
 /*
+TX LoRa wx message with protobuf
 https://github.com/nanopb/nanopb/tree/master/examples/simple
+https://protobuf-decoder.netlify.app/
 
 syntax = "proto2";
 
@@ -58,7 +60,6 @@ void setup() {
   LoRa.enableCrc();
   LoRa.setTxPower(TX_POWER);  //Config.lora.power);
   Serial.println("LoRa init done!");
- 
 }
 
 void loop() {
@@ -85,10 +86,13 @@ void loop() {
 
   Serial.println("Message: ");
 
+  char hexBuf[3];
+
   for (int i = 0; i < stream.bytes_written; i++) {
-    Serial.print(buffer[i], HEX);
-    Serial.print(',');
+    sprintf(hexBuf, "%02x", buffer[i]);
+    Serial.print(hexBuf);
   }
+  Serial.println();
 
   LoRa.beginPacket();
   LoRa.write((char *)buffer, stream.bytes_written);

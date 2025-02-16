@@ -1,5 +1,9 @@
 /*
+RX LoRa wx message with protobuf
+
 https://github.com/nanopb/nanopb/tree/master/examples/simple
+https://protogen.marcgravell.com/decode
+https://protobuf-decoder.netlify.app/
 
 syntax = "proto2";
 
@@ -83,11 +87,14 @@ void loop() {
 
     Serial.println("Message: ");
 
-    for (int i = 0; i < ptrBuffer; i++) {
-      Serial.print(buffer[i], HEX);
-      Serial.print(',');
+    char hexBuf[3];
+
+    for (int i = 0; i < stream.bytes_written; i++) {
+      sprintf(hexBuf, "%02x", buffer[i]);
+      Serial.print(hexBuf);
     }
     Serial.println();
+
     Data decoded_message = Data_init_zero;
 
     pb_istream_t istream = pb_istream_from_buffer(buffer, ptrBuffer);

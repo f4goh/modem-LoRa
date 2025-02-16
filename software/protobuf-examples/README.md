@@ -55,5 +55,9 @@ https://protobuf.dev/programming-guides/proto3/
  ``` 
 
 
+```
+protoc --nanopb_out=. weather.proto
+```
+
 ![Mestastic-inst](images/mesh_install_thonny01.png "th01")
 
