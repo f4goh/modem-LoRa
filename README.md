@@ -39,8 +39,6 @@ Numerous software examples are provided, such as :
 
 # Arduino Micro ATmega32U4 pinout
 ![pinout](images/micro-pinout.png "pinout")
----
-![license](images/ccbyncsa.png "license")
 
 # APRS KISS
 
@@ -50,6 +48,8 @@ Numerous software examples are provided, such as :
 
 ![aprs](images/pinPointAPRS_3Keys.png "aprs")
 
+---
+![license](images/ccbyncsa.png "license")
 
 
 
