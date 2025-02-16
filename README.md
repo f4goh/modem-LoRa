@@ -1,6 +1,6 @@
 # Modem-LoRa
 
-This card provide a very simple and versatile platform for developing experiments around [LoRa](https://en.wikipedia.org/wiki/LoRa) transmission.
+This board provide a very simple and versatile platform for developing experiments around [LoRa](https://en.wikipedia.org/wiki/LoRa) transmission.
 
 ![modem](images/modem.jpg "modem")
 ---
