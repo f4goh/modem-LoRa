@@ -10,7 +10,7 @@
 	
 - TX_APRS.ino
 
-	- Send LoRa APRS Position, message and Weather
+	-  Send APRS message, position , weather when key m,p,w is sent in serial console
 
 # KISS [protocol](https://notblackmagic.com/bitsnpieces/ax.25/)
 
