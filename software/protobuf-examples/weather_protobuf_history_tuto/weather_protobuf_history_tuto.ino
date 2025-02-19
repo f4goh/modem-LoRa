@@ -5,7 +5,6 @@ need callback, more harder
 Some help
 https://groups.google.com/g/nanopb/c/0Xd3eTq5q74
 https://jpa.kapsi.fi/nanopb/docs/reference.html
-https://stackoverflow.com/questions/45979984/creating-callbacks-and-structs-for-repeated-field-in-a-protobuf-message-in-nanop
 https://github.com/nanopb/nanopb/tree/master/examples/
 https://protogen.marcgravell.com/decode
 
