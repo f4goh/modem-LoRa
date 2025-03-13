@@ -50,7 +50,8 @@ Numerous software examples are provided, such as :
 ## PCB
 ![pcb](images/modemV2-esp32-S3.png "pcb")
 
-## Arduino Micro ATmega32U4 pinout
+## Arduino Micro ATmega32U4 pinout 
+(In orange : default pin for TX RX, I²C SDA SCL and SPI)
 ![pinout](images/esp32-s3_pinout.png "pinout")
 # APRS KISS
 
