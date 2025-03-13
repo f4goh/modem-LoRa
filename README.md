@@ -4,9 +4,10 @@ This board provide a very simple and versatile platform for developing experimen
 
 ![modem](images/modem.jpg "modem")
 ---
-## features
+## Features
 
 - Arduino micro based on the [ATmega32U4](https://www.microchip.com/en-us/product/atmega32u4)
+- ESP32-S3 (lolin_s3_mini)
 - virtual (CDC) serial / COM port. (Serial)
 - hardware External sérial (Serial1) RS232 with max3232
 - [RA-02](https://www.e-gizmo.net/oc/kits%20documents/LORA%20Module%20RA-02%20V.1/LORA%20rev2.pdf)  [sx1278](https://www.semtech.fr/products/wireless-rf/lora-connect/sx1278) Module
@@ -31,15 +32,26 @@ Numerous software examples are provided, such as :
 	- Discover [protobuf](https://en.wikipedia.org/wiki/Protocol_Buffers) (free and open-source cross-platform data format used to serialize structured data)
 	- Understand the transmission of packets around [meshtastic](https://meshtastic.org/docs/overview/mesh-algo/)
 ---
-# Schematics
-![sch](schematics/modemLora.png "sch")
+# Arduino micro version
+## Schematics
+![sch](schematics/modemLora_micro.png "sch")
 
-# PCB
+## PCB
 ![pcb](images/pcb.png "pcb")
 
-# Arduino Micro ATmega32U4 pinout
+## Arduino Micro ATmega32U4 pinout
 ![pinout](images/micro-pinout.png "pinout")
 
+---
+# ESP32-S3 version
+## Schematics
+![sch](schematics/modemLora_micro.png "sch")
+
+## PCB
+![pcb](images/modemV2-esp32-S3.png "pcb")
+
+## Arduino Micro ATmega32U4 pinout
+![pinout](images/esp32-s3_pinout.png "pinout")
 # APRS KISS
 
 ![kiss](images/pinPointAPRS_KISS.png "kiss")

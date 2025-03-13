@@ -47,10 +47,10 @@ f4goh-9>APLT00,WIDE1-1:!4753.41N/00016.61E>/A=000219Bat:4.17V/ 0mA
 
 # APRS KISS
 
-![kiss](../../images/pinPointAPRS_KISS.png "kiss")
+![kiss](../../../images/pinPointAPRS_KISS.png "kiss")
 
 # APRS 3 messages sent
 
-![aprs](../../images/pinPointAPRS_3Keys.png "aprs")
+![aprs](../../../images/pinPointAPRS_3Keys.png "aprs")
 
 
