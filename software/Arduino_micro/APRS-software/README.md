@@ -14,7 +14,7 @@
 
 # KISS [protocol](https://notblackmagic.com/bitsnpieces/ax.25/)
 
-![Kiss](../../images/Kiss.png "kiss")
+![Kiss](../../../images/Kiss.png "kiss")
 
 
 # Message exemple

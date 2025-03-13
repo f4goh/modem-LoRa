@@ -22,8 +22,8 @@ Message received : Test
 //#include "pb_encode.h"
 #include "pb_decode.h"
 
-#define MAX_PLAINTEXT_SIZE 36
-#define MAX_CIPHERTEXT_SIZE 36
+#define MAX_PLAINTEXT_SIZE 50
+#define MAX_CIPHERTEXT_SIZE 50
 
 #define LORA_SCK 13   // SX1276 SCK
 #define LORA_MISO 12  // SX1276 MISO
@@ -74,7 +74,7 @@ char meshtasticFullKeyBase64[] = "1PG7OiApB1nwvP+rz05pAQ==";
 
 CTR<AES128> ctraes128;
 
-#define packetDataLength 30
+#define packetDataLength 50
 
 typedef struct {
   uint32_t destination;
@@ -117,7 +117,7 @@ void results(frameStr frame, aesVector* decodeAES128CTR) {
   Serial.print(F("PacketID: "));
   Serial.println(frame.packetID, HEX);
   Serial.print(F("Crypted payload: "));
-  printHex(frame.packetData, frame.size);
+  printHex(frame.packetData, decodeAES128CTR->size);
   Serial.print(F("AES key : "));
   printHex(decodeAES128CTR->key, 16);
   Serial.print(F("AES IV : "));
@@ -139,7 +139,7 @@ void results(frameStr frame, aesVector* decodeAES128CTR) {
   Serial.println(decoded_message.portnum);
   if (decoded_message.portnum == 1) {
     meshtastic_Data_payload_t payload = decoded_message.payload;
-    char* buf = malloc(payload.size + 1);      // because of terminating `\0`
+    char* buf =(char *) malloc(payload.size + 1);      // because of terminating `\0`
     memcpy(buf, payload.bytes, payload.size);  // copy the message
     buf[payload.size] = '\0';                  // force '\0' termination
     Serial.println(buf);
@@ -213,7 +213,7 @@ void loop() {
     i = 0;
     // read packet
     while (LoRa.available()) {
-      *((uint8_t*)&frame + i) = (uint8_t*)LoRa.read();
+      *((uint8_t*)&frame + i) = (uint8_t)LoRa.read();
       i++;
     }
     frame.size = i;
