@@ -47,30 +47,44 @@ Thanks to Igor !!
 //#include "pb_encode.h"
 #include "pb_decode.h"
 
+/// helper function for decoding a record as a protobuf, we will return false if the decoding failed
+bool pb_decode_from_bytes(const uint8_t *srcbuf, size_t srcbufsize, const pb_msgdesc_t *fields, void *dest_struct) {
+  pb_istream_t stream = pb_istream_from_buffer(srcbuf, srcbufsize);
+  if (!pb_decode(&stream, fields, dest_struct)) {
+    char buf[100];
+    sprintf("Can't decode protobuf reason='%s', pb_msgdesc %p", PB_GET_ERROR(&stream), fields);
+    Serial.println(buf);
+    return false;
+  } else {
+    return true;
+  }
+}
+
+
 void setup() {
 
   Serial.begin(115200);
 
-  uint8_t buffer[] = { 0x08, 0x01, 0x12, 0x04, 0x54, 0x65, 0x73, 0x74, 0x48, 0x00 }; //text message
+  uint8_t buffer[] = { 0x08, 0x01, 0x12, 0x04, 0x54, 0x65, 0x73, 0x74, 0x48, 0x00 };  //text message
   meshtastic_Data decoded_message meshtastic_Data_init_zero;
   bool status;
-  pb_istream_t istream = pb_istream_from_buffer(buffer, sizeof(buffer));
-  status = pb_decode(&istream, meshtastic_Data_fields, &decoded_message);
+  
+  status=pb_decode_from_bytes(buffer, sizeof(buffer), meshtastic_Data_fields, &decoded_message);
 
-  if (!status) {
+    if (!status) {
     Serial.println("Failed to decode");
     return;
   }
 
   Serial.print("Decoded test_number: ");
   Serial.println(decoded_message.portnum);
-  
+
   meshtastic_Data_payload_t payload = decoded_message.payload;
-  char *buf = malloc(payload.size + 1); // because of terminating `\0`
-  memcpy(buf, payload.bytes, payload.size); // copy the message
-  buf[payload.size] = '\0'; // force '\0' termination
+  char *buf = malloc(payload.size + 1);      // because of terminating `\0`
+  memcpy(buf, payload.bytes, payload.size);  // copy the message
+  buf[payload.size] = '\0';                  // force '\0' termination
   Serial.println(buf);
-  free(buf);  
+  free(buf);
 }
 
 void loop() {}
