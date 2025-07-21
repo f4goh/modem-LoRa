@@ -63,10 +63,14 @@ Numerous software examples are provided, such as :
 # APRS 3 messages sent
 
 ![aprs](images/pinPointAPRS_3Keys.png "aprs")
+---
+# PCB DIY
+![qro](images/board_qro.jpg "qro")
+
+![sch](images/meshtastic.png "sch")
 
 ---
 ![license](images/ccbyncsa.png "license")
-
 
 
 
